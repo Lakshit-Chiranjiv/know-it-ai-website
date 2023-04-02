@@ -20,7 +20,7 @@ export default function Home() {
       maxTokens: 50,
     });
     const summary = result.data.choices[0].text;
-    return summary;
+    setSummary(summary)
   };
   
 
@@ -39,8 +39,14 @@ export default function Home() {
           setSearch(event.target.value)
         }}/>
         <button className='w-3/4 md:w-1/2 lg:w-1/3 h-10 rounded-md bg-slate-500 text-white font-bold active:scale-95' onClick={() => {
-
+          generateSummary(search)
         }}>Know</button>
+
+        {summary && 
+          <div className='w-3/4 md:w-1/2 lg:w-1/3 h-10 rounded-md bg-slate-500 text-white/90 font-semibold'>
+            <p>{summary}</p>
+          </div>
+        }
       </div>
     </main>
   )
