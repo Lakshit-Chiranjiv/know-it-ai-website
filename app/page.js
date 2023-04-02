@@ -11,6 +11,7 @@ export default function Home() {
 
   const openai = new OpenAI(process.env.OPENAI_API_KEY)
   const [search, setSearch] = useState('')
+  const [summary, setSummary] = useState('')
 
   const generateSummary = async (topic) => {
     const result = await openai.complete({
