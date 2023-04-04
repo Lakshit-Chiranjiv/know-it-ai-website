@@ -18,6 +18,7 @@ export default function Home() {
       engine: 'text-davinci-003',
       prompt: `Generate a 2 paragraph summary for ${topic}. Have atleast 120 words. \n\n`,
       maxTokens: 100,
+      temperature: 0.7,
     });
     const res = result.data.choices[0].text;
     setSummary(res)
@@ -32,7 +33,6 @@ export default function Home() {
           alt='Know It Logo'
           width={400}
           height={400}
-          className='mb-10'
         />
         <h1 className='text-2xl md:text-3xl lg:text-5xl text-white font-bold'>Search for any topic</h1>
         <input className='w-3/4 md:w-1/2 lg:w-1/3 h-10 rounded-md text-center outline-none' type='text' placeholder='Search' onChange={(event) => {
