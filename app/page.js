@@ -34,7 +34,7 @@ export default function Home() {
           width={400}
           height={400}
         />
-        <h1 className='text-2xl md:text-3xl lg:text-5xl text-white font-bold'>Search for any topic</h1>
+        <h1 className='text-2xl md:text-3xl lg:text-5xl text-white font-bold font-sans'>Search for any topic</h1>
         <input className='w-3/4 md:w-1/2 lg:w-1/3 h-10 rounded-md text-center outline-none' type='text' placeholder='Search' onChange={(event) => {
           setSearch(event.target.value)
         }}/>
